@@ -1,25 +1,11 @@
-//import { useState } from "react";
-import Flashcard from "./Flashcard";
-import LogoMini from "./LogoMini";
-
-export default function MainPage() {
-    //let [page, setPage] = useState('show');
-    // ${page === 'show' ? 'hidden' : 'show'}
+export default function MainPage({ page, setPage, ending }) {
     return (
-        <>
-            <div className={`main-page hidden`}>
-                <img className="logo" src="assets/logo.png" alt="" />
-                {/* <div className="start-button" onClick={() => setPage('hidden')}> */}
-                <div className="start-button">
-                    Praticar React
-                    <img src="assets/next.png" alt="" />
-                </div>
+        <div className={`main-page ${page} ${ending === 'hidden' ? '' : 'hidden'}`}>
+            <img className="logo" src="assets/logo.png" alt="" />
+            <div className="start-button" data-identifier="start-zap-recall" onClick={() => setPage('hidden')}>
+                Praticar React
+                <img src="assets/next.png" alt="" />
             </div>
-
-            <div className={`flashcards`}>
-                <LogoMini />
-                <Flashcard />
-            </div>
-        </>
+        </div>
     );
 }
