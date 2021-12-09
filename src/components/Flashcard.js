@@ -1,28 +1,15 @@
 import { useState } from 'react';
 import EvaluationButtons from './EvaluationButtons';
 
-export default function Flashcard({ setEnding, setSuccessPage }) {
-    // const quizz = [
-    //     { question: "O que é JSX ?", answer: "Uma extensão de linguagem do JavaScript" },
-    //     { question: "O React é __", answer: "uma biblioteca JavaScript para construção de interfaces" },
-    //     { question: "Componentes devem iniciar com __", answer: "letra maiúscula" },
-    //     { question: "Podemos colocar __ dentro do JSX", answer: "expressões" },
-    //     { question: "O ReactDOM nos ajuda __", answer: "interagindo com a DOM para colocar componentes React na mesma" },
-    //     { question: "Usamos o npm para __", answer: "gerenciar os pacotes necessários e suas dependências" },
-    //     { question: "Usamos props para __", answer: "passar diferentes informações para componentes" },
-    //     { question: "Usamos estado(state) para __", answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
-    // ];
-    const quizz = [
-        { question: "O que é JSX ?", answer: "Uma extensão de linguagem do JavaScript" },
-        { question: "O React é __", answer: "uma biblioteca JavaScript para construção de interfaces" }
-    ]
+export default function Flashcard({ setEnding, setSuccessPage, zapGoal, quizz }) {
+
 
     let [currentCard, setCurrentCard] = useState(0);
     let [incorrectAnswers, setIncorrectAnswers] = useState(0);
-
     let [border, setBorder] = useState('');
     let [front, setFront] = useState('show');
     let [showButtons, setShowButtons] = useState('hidden');
+
 
     function turnCard() {
         setFront('hidden');
@@ -34,7 +21,7 @@ export default function Flashcard({ setEnding, setSuccessPage }) {
             setBorder('');
             setFront('show');
             setCurrentCard(currentCard + 1);
-        } else if (incorrectAnswers === 0) {
+        } else if (quizz.length - incorrectAnswers >= zapGoal) {
             setEnding('show');
             setSuccessPage('');
         } else {
