@@ -1,4 +1,5 @@
-export default function EvaluationButtons({ showButtons, setShowButtons, setBorder, incorrectAnswers, setIncorrectAnswers }) {
+export default function EvaluationButtons({ showButtons, setShowButtons, setBorder, incorrectAnswers, setIncorrectAnswers, zapQuantity, setZapQuantity }) {
+
 
     function conclude(button) {
         if (button === '1') {
@@ -10,6 +11,7 @@ export default function EvaluationButtons({ showButtons, setShowButtons, setBord
             setBorder('green-border');
         } else if (button === '4') {
             setBorder('yellow-border');
+            setZapQuantity(zapQuantity + 1);
         }
 
         setShowButtons('hidden');

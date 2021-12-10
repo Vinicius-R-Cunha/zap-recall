@@ -271,7 +271,7 @@ body {
     margin-left: 12px;
 }
 
-.ending-message p:last-child {
+.ending-message p:nth-child(2), .ending-message p:nth-child(3){
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;

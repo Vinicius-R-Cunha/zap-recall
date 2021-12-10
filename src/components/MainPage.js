@@ -1,4 +1,5 @@
 export default function MainPage({ page, setPage, ending, zapGoal, setZapGoal, questionsQuantity }) {
+
     function goToFlashcards() {
         if (zapGoal >= 1 && zapGoal % 1 === 0 && zapGoal <= questionsQuantity) {
             setPage('hidden');
