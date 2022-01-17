@@ -38,8 +38,21 @@ export default function Flashcard({ setEnding, setSuccessPage, zapGoal, quizz, i
             <div className={`answer ${front === 'show' ? 'hidden' : 'show'}`}>
                 <p>{quizz[currentCard].question}</p>
                 <p className="answer-text">{quizz[currentCard].answer}</p>
-                <EvaluationButtons showButtons={showButtons} setShowButtons={setShowButtons} setBorder={setBorder} incorrectAnswers={incorrectAnswers} setIncorrectAnswers={setIncorrectAnswers} zapQuantity={zapQuantity} setZapQuantity={setZapQuantity} />
-                <img className={`${showButtons === 'show' ? 'hidden' : 'show'}`} src="assets/turn.png" alt="" data-identifier="arrow" onClick={() => changeCard()} />
+                <EvaluationButtons
+                    showButtons={showButtons}
+                    setShowButtons={setShowButtons}
+                    setBorder={setBorder}
+                    incorrectAnswers={incorrectAnswers}
+                    setIncorrectAnswers={setIncorrectAnswers}
+                    zapQuantity={zapQuantity}
+                    setZapQuantity={setZapQuantity}
+                />
+                <img className={`${showButtons === 'show' ? 'hidden' : 'show'}`}
+                    src="assets/turn.png"
+                    alt=""
+                    data-identifier="arrow"
+                    onClick={() => changeCard()}
+                />
             </div>
         </div>
     );

@@ -15,9 +15,32 @@ export default function App() {
 
     return (
         <>
-            <MainPage page={page} setPage={setPage} ending={ending} zapGoal={zapGoal} setZapGoal={setZapGoal} setQuizz={setQuizz} setQuizzTitle={setQuizzTitle} />
-            <Flashcards page={page} ending={ending} setEnding={setEnding} setSuccessPage={setSuccessPage} zapGoal={zapGoal} quizz={quizz} quizzTitle={quizzTitle} incorrectAnswers={incorrectAnswers} setIncorrectAnswers={setIncorrectAnswers} />
-            <EndingScreen ending={ending} setEnding={setEnding} successPage={successPage} incorrectAnswers={incorrectAnswers} />
+            <MainPage
+                page={page}
+                setPage={setPage}
+                ending={ending}
+                zapGoal={zapGoal}
+                setZapGoal={setZapGoal}
+                setQuizz={setQuizz}
+                setQuizzTitle={setQuizzTitle}
+            />
+            <Flashcards
+                page={page}
+                ending={ending}
+                setEnding={setEnding}
+                setSuccessPage={setSuccessPage}
+                zapGoal={zapGoal}
+                quizz={quizz}
+                quizzTitle={quizzTitle}
+                incorrectAnswers={incorrectAnswers}
+                setIncorrectAnswers={setIncorrectAnswers}
+            />
+            <EndingScreen
+                ending={ending}
+                setEnding={setEnding}
+                successPage={successPage}
+                incorrectAnswers={incorrectAnswers}
+            />
         </>
     );
 }

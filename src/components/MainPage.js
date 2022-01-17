@@ -45,7 +45,13 @@ export default function MainPage({ setQuizz, setQuizzTitle, page, setPage, endin
     return (
         <div className={`main-page ${page} ${ending === 'hidden' ? '' : 'hidden'}`}>
             <img className="logo" src="assets/logo.png" alt="" />
-            <input className="zap-goal" placeholder="Sua meta de zaps" type="text" value={zapGoal} onInput={e => setZapGoal(e.target.value)} />
+            <input
+                className="zap-goal"
+                placeholder="Sua meta de zaps"
+                type="text"
+                value={zapGoal}
+                onInput={e => setZapGoal(e.target.value)}
+            />
             <StartButton name="Javascript" goToFlashcards={goToFlashcards} />
             <StartButton name="React" goToFlashcards={goToFlashcards} />
         </div>

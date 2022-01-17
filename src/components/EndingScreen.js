@@ -5,7 +5,12 @@ export default function EndingScreen({ ending, successPage, incorrectAnswers }) 
 
     const completionArray = [
         { text1: "PARABÉNS!", text2: "Você não esqueceu de nenhum flashcard!", text3: "", image: "assets/party.png" },
-        { text1: "Putz..", text2: `Você esqueceu ${incorrectAnswers} flashcards..`, text3: "Não desanime! Na próxima você consegue!", image: "assets/sad.png" }
+        {
+            text1: "Putz..",
+            text2: `Você esqueceu ${incorrectAnswers} flashcards..`,
+            text3: "Não desanime! Na próxima você consegue!",
+            image: "assets/sad.png"
+        }
     ]
 
     return (

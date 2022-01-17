@@ -1,6 +1,5 @@
 export default function EvaluationButtons({ showButtons, setShowButtons, setBorder, incorrectAnswers, setIncorrectAnswers, zapQuantity, setZapQuantity }) {
 
-
     function conclude(button) {
         if (button === '1') {
             setBorder('black-border');

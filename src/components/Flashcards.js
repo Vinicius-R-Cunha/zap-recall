@@ -7,7 +7,13 @@ export default function Flashcards({ page, ending, setEnding, setSuccessPage, za
         <div className={`flashcards ${page === 'show' ? 'hidden' : 'show'} ${ending === 'hidden' ? '' : 'hidden'}`}>
             <LogoMini />
             <QuizzTitle quizzTitle={quizzTitle} />
-            <Flashcard setEnding={setEnding} setSuccessPage={setSuccessPage} zapGoal={zapGoal} quizz={quizz} incorrectAnswers={incorrectAnswers} setIncorrectAnswers={setIncorrectAnswers} />
+            <Flashcard
+                setEnding={setEnding}
+                setSuccessPage={setSuccessPage}
+                zapGoal={zapGoal} quizz={quizz}
+                incorrectAnswers={incorrectAnswers}
+                setIncorrectAnswers={setIncorrectAnswers}
+            />
         </div>
     );
 }
